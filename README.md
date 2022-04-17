@@ -12,7 +12,7 @@ CURLS ->
 
 1. To store the trades in DB below is the curl request:
 
-curl --location --request PUT 'http://localhost:9999/tradeStore' \
+curl --location --request PUT 'http://localhost:8080/tradeStore' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "id": "T1",
@@ -30,7 +30,7 @@ Empty Response with 201 Created HttpStatus.
 
 2. To fetch the trades from DB below is the curl request:
 
-curl --location --request GET 'http://localhost:9999/tradeStores'
+curl --location --request GET 'http://localhost:8080/tradeStores'
 
 Sample Output:
 

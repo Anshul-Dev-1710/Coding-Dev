@@ -3,11 +3,10 @@ package org.code.dev.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
+@Data
 @Entity
 @Table(name = "Trades")
-@Data
 public class Trade {
 
     @Id

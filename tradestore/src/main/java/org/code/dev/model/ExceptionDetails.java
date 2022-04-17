@@ -6,14 +6,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Builder;
 import lombok.Data;
 
+@Data
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "type",
         "cause",
         "errorMessage"
 })
-@Data
-@Builder
 public class ExceptionDetails {
 
     @JsonProperty("type")

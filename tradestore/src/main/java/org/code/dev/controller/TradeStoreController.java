@@ -22,7 +22,7 @@ public class TradeStoreController {
     private TradeService tradeService;
 
     @PutMapping("/tradeStore")
-    private ResponseEntity<?> tradeStore(@RequestBody Trade trade) throws ValidationException, ParseException {
+    public ResponseEntity<?> tradeStore(@RequestBody Trade trade) throws ValidationException, ParseException {
         if(tradeService.doTradeValidations(trade)) {
             return new ResponseEntity<>(HttpStatus.CREATED);
         }
@@ -30,9 +30,8 @@ public class TradeStoreController {
     }
 
     @GetMapping("/tradeStores")
-    private ResponseEntity<?> getAllTraders() {
+    public ResponseEntity<?> getAllTraders() {
         Optional<List<Trade>> trades = Optional.ofNullable(tradeService.findAll());
-        System.out.println(trades.get());
         return new ResponseEntity<>(trades, HttpStatus.OK);
     }
 
